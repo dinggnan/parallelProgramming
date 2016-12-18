@@ -1,0 +1,18 @@
+digraph {
+	graph [ranksep=0.25, fontname=Arial, nodesep=0.125];
+	node [fontname=Arial, style=filled, height=0, width=0, shape=box, fontcolor=white];
+	edge [fontname=Arial];
+	"_dl_sysdep_start" [color="#f15b02", fontcolor="#ffffff", fontsize="10.00", label="_dl_sysdep_start\n90.68%\n(0.01%)\n1×"];
+	"_dl_sysdep_start" -> "dl_main" [color="#f15b02", label="90.67%\n1×", arrowsize="0.95", fontsize="10.00", fontcolor="#f15b02", labeldistance="3.63", penwidth="3.63"];
+	"dl_main" [color="#f15b02", fontcolor="#ffffff", fontsize="10.00", label="dl_main\n90.67%\n(0.03%)\n1×"];
+	"dl_main" -> "_dl_relocate_object" [color="#e3a904", label="81.49%\n33×", arrowsize="0.90", fontsize="10.00", fontcolor="#e3a904", labeldistance="3.26", penwidth="3.26"];
+	"_dl_start" [color="#f15b02", fontcolor="#ffffff", fontsize="10.00", label="_dl_start\n90.69%\n(0.01%)\n1×"];
+	"_dl_start" -> "_dl_sysdep_start" [color="#f15b02", label="90.68%\n1×", arrowsize="0.95", fontsize="10.00", fontcolor="#f15b02", labeldistance="3.63", penwidth="3.63"];
+	"do_lookup_x" [color="#0aab3b", fontcolor="#ffffff", fontsize="10.00", label="do_lookup_x\n42.47%\n(32.59%)\n4724×"];
+	"_dl_lookup_symbol_x" [color="#95cf07", fontcolor="#ffffff", fontsize="10.00", label="_dl_lookup_symbol_x\n67.74%\n(25.27%)\n4724×"];
+	"_dl_lookup_symbol_x" -> "do_lookup_x" [color="#0aab3b", label="42.47%\n4724×", arrowsize="0.65", fontsize="10.00", fontcolor="#0aab3b", labeldistance="1.70", penwidth="1.70"];
+	"0x0000000000000cc0" [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="0x0000000000000cc0\n100.00%\n(0.00%)\n0×"];
+	"0x0000000000000cc0" -> "_dl_start" [color="#f15b02", label="90.69%\n1×", arrowsize="0.95", fontsize="10.00", fontcolor="#f15b02", labeldistance="3.63", penwidth="3.63"];
+	"_dl_relocate_object" [color="#e3a904", fontcolor="#ffffff", fontsize="10.00", label="_dl_relocate_object\n81.49%\n(21.24%)\n33×"];
+	"_dl_relocate_object" -> "_dl_lookup_symbol_x" [color="#55c408", label="60.23%\n4549×", arrowsize="0.78", fontsize="10.00", fontcolor="#55c408", labeldistance="2.41", penwidth="2.41"];
+}
